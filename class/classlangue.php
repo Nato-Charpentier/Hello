@@ -8,7 +8,7 @@ class langue {
         global $conn;
 
         $request_renet = "ALTER TABLE langue AUTO_INCREMENT = 1";
-        $request_delete = "DELETE FROM `langue`";
+        $request_delete = "DELETE FROM `langue`"; 
 
         $conn->query($request_delete);
         $conn->query($request_renet);
@@ -46,7 +46,7 @@ class langue {
     public function updateLangue($id,$name,$translate){
 
         global $conn;
-        
+
         $update = "UPDATE `langue` SET `name`='".$name."',`translate`='".$translate."' WHERE `id`=".$id;
         $conn->query($update);
     }
