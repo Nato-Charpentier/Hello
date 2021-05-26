@@ -3,6 +3,11 @@
 
 class langue {
      
+    /**
+     * the renetid function reset the table, it removes all the save fields and returns the id to 0.
+     *
+     * return void
+     */
     public function renetid(){
 
         global $conn;
@@ -15,6 +20,13 @@ class langue {
 
     }
 
+    /**
+     * create 1 language.
+     *
+     * param [text] $name
+     * param [text] $translate
+     * return void
+     */
     public function createLangue($name,$translate){
 
         global $conn;
@@ -24,17 +36,27 @@ class langue {
         $conn->query($request_insert);
     }
 
-    
+    /**
+     * I get the language list.
+     *
+     * return void
+     */
     public function getAllLangue(){
 
         global $conn;
-        // je récupère liste langue
+        
         $request_all = "SELECT * FROM `langue`";
         $get_all_langue = $conn->query($request_all);
 
         return $get_all_langue;
     }
 
+    /**
+     * deletes the language select in the tables.
+     *
+     * param [id] $id
+     * return void
+     */
     public function deleteLangue($id){
 
         global $conn;
@@ -43,6 +65,14 @@ class langue {
         $conn->query($delete_langue_request);
     }
 
+    /**
+     * updates the language select in the tables.
+     *
+     * param [id] $id
+     * param [text] $name
+     * param [text] $translate
+     * return void
+     */
     public function updateLangue($id,$name,$translate){
 
         global $conn;
