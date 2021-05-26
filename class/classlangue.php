@@ -23,8 +23,8 @@ class langue {
     /**
      * create 1 language.
      *
-     * param [text] $name
-     * param [text] $translate
+     * param [string] $name
+     * param [string] $translate
      * return void
      */
     public function createLangue($name,$translate){
@@ -54,7 +54,7 @@ class langue {
     /**
      * deletes the language select in the tables.
      *
-     * param [id] $id
+     * param [int] $id
      * return void
      */
     public function deleteLangue($id){
@@ -68,9 +68,9 @@ class langue {
     /**
      * updates the language select in the tables.
      *
-     * param [id] $id
-     * param [text] $name
-     * param [text] $translate
+     * param [int] $id
+     * param [string] $name
+     * param [string] $translate
      * return void
      */
     public function updateLangue($id,$name,$translate){
