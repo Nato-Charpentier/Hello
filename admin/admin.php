@@ -15,8 +15,10 @@
     include __DIR__ . '/../class/classlangue.php';
 
     $langue = new langue();
+
     if (!empty($_POST['button'])) {
         
+        //create langue
         if ($_POST['button'] == "creer") {
             $name = $_POST['name']; 
             $translate = $_POST['translate'];
@@ -25,12 +27,14 @@
             
         }
         
+        //reset langue
         if ($_POST['button'] == "reset") {
 
             $langue->renetid();
         
         }
 
+        //delete language select
         if($_POST['button'] == "supprimer"){
         
             $id = $_POST['id'];

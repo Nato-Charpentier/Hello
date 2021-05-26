@@ -60,6 +60,7 @@
                     
                     //retiré element dans #affiche
                     $('#affiche').empty(); 
+
                     // je récupère la valeur "langue"
                     $select_langue = $('#selec_langue').val();
                     
@@ -71,8 +72,6 @@
 
 
                 });
-
-
             });
         </script>
     </body>
